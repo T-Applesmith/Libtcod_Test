@@ -29,8 +29,8 @@ class Entity:
         if self.item:
             self.item.owner = self
 
-        if self.item:
-            self.item.owner = self
+        if self.inventory:
+            self.inventory.owner = self
 
     def move(self, dx, dy):
         # Move the entity by a given amount
