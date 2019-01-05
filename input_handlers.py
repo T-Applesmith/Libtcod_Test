@@ -18,6 +18,9 @@ def handle_keys(key, game_state):
 
 def handle_player_turn_keys(key):
     key_char = chr(key.c)
+
+    #if key.vk != 0:
+    #    print(key_char +" "+ str(key.vk))
     
     # Movement keys - VIM
     if key.vk == libtcod.KEY_UP or key_char == 'k':
@@ -45,6 +48,10 @@ def handle_player_turn_keys(key):
 
     elif key_char == 'd':
         return {'drop_inventory': True}
+
+    #elif key.vk == libtcod.KEY_ENTER:
+    elif key.shift and key_char == '.':
+        return {'take_stairs': True}
 
     if key.vk == libtcod.KEY_ENTER and key.lalt:
         # Alt+Enter: toggle full screen
