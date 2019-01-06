@@ -234,6 +234,7 @@ def play_game(player, entities, game_map, message_log, game_state, con, panel, c
 
                         if dead_entity:
                             if dead_entity == player:
+                                print('ʕ•ᴥ•ʔ The game doesn\'t hate you, I hate you. My name is Sam Fehringer, and this is MY game. ୧ʕ̀•ᴥ́́•ʔ୨')
                                 message, game_state = kill_player(dead_entity)
                             else:
                                 message = kill_monster(dead_entity)
